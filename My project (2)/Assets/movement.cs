@@ -14,11 +14,15 @@ public class movement : MonoBehaviour
     public Transform groundCheck;
     public float groundCheckRadius;
     public LayerMask whatIsGround;
+   
+
 
     private bool grounded;
+    private Animator anim; 
 
     void Start()
     {
+        anim= GetComponent<Animator>();
     }
 
     void Update()
@@ -49,6 +53,8 @@ public class movement : MonoBehaviour
                 GetComponent<SpriteRenderer>().flipX = false;
             }
         }
+        anim.SetFloat("height", GetComponent<Rigidbody2D>().velocity.y);
+        anim.SetBool("grounded", grounded);
     }
 
     void FixedUpdate()
@@ -58,6 +64,7 @@ public class movement : MonoBehaviour
             groundCheckRadius,
             whatIsGround
         );
+
     }
 
     void Jump()
