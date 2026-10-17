@@ -50,3 +50,15 @@ TagManager:
   - name: char
     uniqueID: 4088301199
     locked: 0
+  - name: water
+    uniqueID: 643548095
+    locked: 0
+  - name: tree1
+    uniqueID: 1712053473
+    locked: 0
+  - name: mushroom
+    uniqueID: 357340955
+    locked: 0
+  - name: New Layer 7
+    uniqueID: 2364835131
+    locked: 0
